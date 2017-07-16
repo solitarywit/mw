@@ -1,0 +1,46 @@
+@import "variables";
+body {
+  font-family: 'Bitter', serif;
+}
+.page {
+  box-sizing: border-box;
+  background: $bg-black;
+  color: $white;
+  height: 100vh;
+  position: relative;
+}
+.text-white {
+  color: $white
+}
+.text-gray {
+  color: $gray;
+}
+.text-yellow {
+  color: $yellow;
+}
+.display-1 {
+  font-size: 72px;
+  line-height: 85px;
+  font-weight: bold;
+  font-family: 'Bitter', serif;
+  color: $white;
+}
+.small {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+}
+.medium {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+i {
+  &.arrow {
+    background: url('images/arrow.png') no-repeat center;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+  }
+}
