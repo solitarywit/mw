@@ -5,9 +5,12 @@ $(document).ready(function(){
         dots: true,
         arrows: false,
         appendDots: $('#dots'),
+        autoplay: true,
+        autoplaySpeed: 3000,
     });
 
     $('.toggler').click(function(){
         $(this).toggleClass('open');
+        $('#main-menu').toggleClass('open');
     });
 });

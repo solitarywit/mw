@@ -1,0 +1,39 @@
+@import "variables";
+.main-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transform: translateX(100%);
+  transition: transform 1s;
+  z-index: 10;
+  &.open {
+    transform: translateX(0);
+  }
+  menu {
+    list-style: none;
+    height: 100vh;
+    background: rgba($blue, .95);
+    font-family: 'Roboto', sans-serif;
+    font-size: 67px;
+    line-height: 120px;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 0 100px;
+    position: relative;
+    li:last-child {
+      position: absolute;
+      bottom: 115px;
+    }
+    a {
+      color: $white;
+      &:hover {
+        color: $dark-blue;
+        text-decoration: none;
+      }
+    }
+  }
+}
