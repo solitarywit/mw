@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
-<div class="page" id="home">
+<div class="page">
     {% block header %}{% include "components/header.html" %}{% endblock %}
-    {% block carousel %}{% include "components/carousel.html" %}{% endblock %}
+    {% block carousel %}{% endblock %}
+    {% block about %}{% endblock %}
     {% block menu %}{% include "components/menu.html" %}{% endblock %}
 </div>
 <script src="app.js"></script>

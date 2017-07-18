@@ -5,12 +5,30 @@
 body {
   font-family: 'Bitter', serif;
 }
+.container {
+  max-width: 100%;
+}
 .page {
   box-sizing: border-box;
   background: $bg-black;
   color: $white;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
+  a {
+    color: $white;
+    font-weight: normal;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.white-theme {
+  background: $white;
+  color: $bg-black;
+}
+.d-flex {
+  display: flex;
 }
 .text-white {
   color: $white
@@ -27,6 +45,18 @@ body {
   font-weight: bold;
   font-family: 'Bitter', serif;
   color: $white;
+}
+.display-2 {
+  font-size: 63px;
+  line-height: 70px;
+  font-weight: bold;
+  font-family: 'Bitter', serif;
+}
+.display-4 {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: bold;
+  font-family: 'Bitter', serif;
 }
 .small {
   font-family: 'Roboto', sans-serif;

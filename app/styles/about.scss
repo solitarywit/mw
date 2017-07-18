@@ -1,0 +1,15 @@
+.about {
+  .about-container {
+    min-height: 100vh;
+    padding-top: 49px;
+    padding-bottom: 49px;
+    margin: 0;
+  }
+  .about-contact-title {
+    margin-bottom: 25px;
+  }
+  .about-content-mid {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
