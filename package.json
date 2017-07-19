@@ -9,6 +9,7 @@
   "author": "Ann Bk",
   "license": "MIT",
   "dependencies": {
+    "aos": "^2.2.0",
     "browser-sync": "^2.18.12",
     "connect-livereload": "^0.6.0",
     "flexboxgrid": "^6.3.1",

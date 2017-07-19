@@ -23,6 +23,7 @@ gulp.task('build:html', function () {
 gulp.task('build:js', function (cb) {
     return gulp.src(['node_modules/jquery/dist/jquery.js',
         'node_modules/slick-carousel/slick/slick.js',
+        'node_modules/aos/dist/*.js',
         'app/scripts/**/*.js'])
         .pipe(concat('app.js'))
         .pipe(gulp.dest('./dist/app'))
@@ -32,7 +33,7 @@ gulp.task('build:js', function (cb) {
 });
 
 gulp.task('build:scss', function () {
-   return gulp.src(['node_modules/flexboxgrid/css/*.css', 'app/styles/**/*.scss'])
+   return gulp.src(['node_modules/flexboxgrid/css/*.css', 'app/styles/**/*.scss', 'node_modules/aos/dist/*.css'])
        .pipe(concat('app.scss'))
        .pipe(sass.sync().on('error', sass.logError))
        .pipe(gulp.dest('./dist/app'))

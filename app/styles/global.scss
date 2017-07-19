@@ -4,6 +4,7 @@
 }
 body {
   font-family: 'Bitter', serif;
+  background: $bg-black;
 }
 .container {
   max-width: 100%;
@@ -49,6 +50,12 @@ body {
 .display-2 {
   font-size: 63px;
   line-height: 70px;
+  font-weight: bold;
+  font-family: 'Bitter', serif;
+}
+.display-3 {
+  font-size: 54px;
+  line-height: 85px;
   font-weight: bold;
   font-family: 'Bitter', serif;
 }
