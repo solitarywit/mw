@@ -10,9 +10,19 @@
 <body>
 <div class="page">
     {% block header %}{% include "components/header.html" %}{% endblock %}
-    {% block carousel %}{% endblock %}
-    {% block about %}{% endblock %}
-    {% block works %}{% endblock %}
+    <main class="main">
+        <div class="cd-index cd-main-content">
+            {% block carousel %}{% endblock %}
+            {% block about %}{% endblock %}
+            {% block works %}{% endblock %}
+            {% block contact %}{% endblock %}
+        </div>
+    </main>
+    <div class="pl-wave cd-loading-bar">
+        <div class="loader">
+            <span></span>
+        </div>
+    </div>
     {% block menu %}{% include "components/menu.html" %}{% endblock %}
 </div>
 <script src="app.js"></script>

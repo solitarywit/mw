@@ -1,0 +1,31 @@
+.contact {
+  .contact-container {
+    min-height: 100vh;
+    padding-top: 49px;
+    padding-bottom: 49px;
+    margin: 0;
+  }
+  .contact-title {
+    margin-bottom: 25px;
+  }
+  .contact-content-mid {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .input-text {
+    width: 100%;
+  }
+  .input-group {
+    position: relative;
+    .btn-run {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: url("images/run.png") no-repeat center;
+      width: 32px;
+      height: 32px;
+      border: 0;
+      outline: 0;
+    }
+  }
+}

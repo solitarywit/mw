@@ -8,6 +8,8 @@ body {
 }
 .container {
   max-width: 100%;
+  padding: 0 10px;
+  overflow: hidden;
 }
 .page {
   box-sizing: border-box;
@@ -15,6 +17,7 @@ body {
   color: $white;
   min-height: 100vh;
   position: relative;
+  transform: none !important;
   a {
     color: $white;
     font-weight: normal;
@@ -27,9 +30,31 @@ body {
 .white-theme {
   background: $white;
   color: $bg-black;
+
+  .display-2 {
+    color: $light-gray;
+  }
+  .text-gray {
+    color: $bg-black;
+  }
+
+  .input-text {
+    border-bottom: 1px solid $light-gray;
+    color: $bg-black;
+  }
+
+  .text-white {
+    color: $bg-black;
+  }
+  a {
+    color: $bg-black;
+  }
 }
 .d-flex {
   display: flex;
+}
+.d-block {
+  display: block;
 }
 .text-white {
   color: $white
@@ -74,6 +99,14 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   line-height: 36px;
+}
+
+.input-text {
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid $white;
+  background: none;
+  color: $white;
 }
 
 i {

@@ -1,3 +1,15 @@
+.cd-contact {
+  .header {
+    .toggler {
+      span {
+        background: $bg-black;
+      }
+    }
+    .logo-img {
+      background: url("images/logo-black.png") no-repeat center left;
+    }
+  }
+}
 .header {
   position: fixed;
   width: 100%;
@@ -13,7 +25,12 @@
   .logo {
     pointer-events: auto;
   }
-
+  .logo-img {
+    background: url("images/logo.png") no-repeat center left;
+    display: block;
+    width: 48px;
+    height: 53px;
+  }
   .toggler {
     width: 34px;
     height: 22px;

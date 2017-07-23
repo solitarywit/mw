@@ -49,6 +49,11 @@
   pointer-events: none;
   .dots {
     position: relative;
+    display: flex;
+    justify-content: flex-end;
+    .slick-dots {
+      position: relative;
+    }
   }
   .slick-dots {
     right: 0;
