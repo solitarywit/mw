@@ -1,7 +1,7 @@
 // gulpfile.js
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var nunjucks = require('gulp-nunjucks-render');
+var nunjucks = require('gulp-nunjucks-html');
 var browserSync = require('browser-sync').create();
 var concat = require('gulp-concat');
 
@@ -16,7 +16,60 @@ gulp.task('browserSync', function() {
 
 gulp.task('build:html', function () {
    return gulp.src('app/templates/**/*.html')
-       .pipe(nunjucks({path: ['app/templates/']}))
+       .pipe(nunjucks({searchPaths: ['app/templates/'], locals: {
+           works: {
+               items: [
+                   {
+                       title: 'Play with no limits.',
+                       image: 'images/slide1.jpg',
+                   },
+                   {
+                       title: 'Play with no limits.',
+                       image: 'images/slide1.jpg',
+                   },
+                   {
+                       title: 'Play with no limits.',
+                       image: 'images/slide1.jpg',
+                   },
+                   {
+                       title: 'Play with no limits.',
+                       image: 'images/slide1.jpg',
+                   }
+               ]
+           },
+           carousel: {
+               slides: [
+                   {
+                        image: 'images/slide1.jpg',
+                        title : 'Play with <span class="text-yellow">no limits</span>.',
+                        description: 'How we created the largest russian CS:GO gaming service.',
+                        href: '#',
+                        email: 'hello@blackur.com'
+                   },
+                   {
+                       image: 'images/slide1.jpg',
+                       title : 'Play with <span class="text-yellow">no limits</span>.',
+                       description: 'How we created the largest russian CS:GO gaming service.',
+                       href: '#',
+                       email: 'hello@blackur.com'
+                   },
+                   {
+                       image: 'images/slide1.jpg',
+                       title : 'Play with <span class="text-yellow">no limits</span>.',
+                       description: 'How we created the largest russian CS:GO gaming service.',
+                       href: '#',
+                       email: 'hello@blackur.com'
+                   },
+                   {
+                       image: 'images/slide1.jpg',
+                       title : 'Play with <span class="text-yellow">no limits</span>.',
+                       description: 'How we created the largest russian CS:GO gaming service.',
+                       href: '#',
+                       email: 'hello@blackur.com'
+                   }
+               ]
+           }
+       }}))
        .pipe(gulp.dest('./dist/app'));
 });
 

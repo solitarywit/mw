@@ -1,37 +1,26 @@
+{% macro slide(data) %}
+<div class="slide" style="background-image: url('{{data.image}}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-2 last-xs first-md">
+                <div class="slide-footer">
+                    <div class="small text"><a href="mailto:{{data.email}}">{{data.email}}</a></div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-3">
+                <h1 class="display-1 title">{{data.title}}</h1>
+                <div class="medium">{{data.description}}</div>
+                <a href="{{data.href}}"><i class="arrow"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endmacro %}
 <section class="home-carousel-wrapper" id="home">
     <div class="slick-carousel home-carousel">
-        <div class="slide" style="background-image: url('/images/slide1.jpg')">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-md-2 last-xs first-md">
-                        <div class="slide-footer">
-                            <div class="small text"><a href="mailto:hello@blackur.com">hello@blackur.com</a></div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-3">
-                        <h1 class="display-1 title">Play with <span class="text-yellow">no limits</span>.</h1>
-                        <div class="medium">How we created the largest russian CS:GO gaming service.</div>
-                        <a href="#"><i class="arrow"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="slide">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-md-2 last-xs first-md">
-                        <div class="slide-footer">
-                            <div class="small text">hello@blackur.com</div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-3">
-                        <h1 class="display-1 title">Next slide information</span>.</h1>
-                        <div class="medium">How we created the largest russian CS:GO gaming service.</div>
-                        <a href="#"><i class="arrow"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% asyncEach item in carousel.slides %}
+            {{ slide(item) }}
+        {% endeach %}
     </div>
     <div class="dots-container">
         <div class="container dots" id="dots"></div>

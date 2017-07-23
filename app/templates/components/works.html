@@ -1,3 +1,11 @@
+{% macro work(data) %}
+<div class="row work-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" style="background-image: url('{{data.image}}')">
+    <div class="col-xs-12 col-md-6 col-lg-3 work-content d-flex">
+        <h2 class="display-3 text-white">{{ data.title }}</h2>
+    </div>
+</div>
+{% endmacro %}
+
 <section class="works" id="works">
     <div class="container">
         <div class="row">
@@ -5,21 +13,9 @@
                 <div class="small email"><a href="mailto:hello@blackur.com">hello@blackur.com</a></div>
             </div>
             <div class="col-xs-12 col-md-8 work">
-                <div class="row work-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" style="background-image: url('/images/slide1.jpg')">
-                    <div class="col-xs-12 col-md-6 col-lg-3 work-content d-flex">
-                        <h2 class="display-3 text-white">Play with no limits.</h2>
-                    </div>
-                </div>
-                <div class="row work-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" style="background-image: url('/images/slide1.jpg')">
-                    <div class="col-xs-12 col-md-6 col-lg-3 work-content d-flex">
-                        <h2 class="display-3 text-white">Touch the mirror.</h2>
-                    </div>
-                </div>
-                <div class="row work-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" style="background-image: url('/images/slide1.jpg')">
-                    <div class="col-xs-12 col-md-6 col-lg-3 work-content d-flex">
-                        <h2 class="display-3 text-white">Play with no limits.</h2>
-                    </div>
-                </div>
+                {% asyncEach item in works.items %}
+                    {{ work(item) }}
+                {% endeach %}
             </div>
         </div>
     </div>
